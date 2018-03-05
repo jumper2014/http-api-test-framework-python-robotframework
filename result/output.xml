@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180305 15:42:05.553" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="F:\git\github\http-api-test-framework-python-robotframework\testsuite" id="s1" name="Testsuite">
+<suite source="F:\git\github\http-api-test-framework-python-robotframework\testsuite\user" id="s1-s1" name="User">
+<suite source="F:\git\github\http-api-test-framework-python-robotframework\testsuite\user\user_create.txt" id="s1-s1-s1" name="User Create">
+<test id="s1-s1-s1-t1" name="CreateUserOk">
+<kw name="User Create" library="user_api">
+<arguments>
+<arg>admin</arg>
+<arg>30</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20180305 15:42:05.882" level="INFO">C:\Python27\Lib\site-packages\sqlalchemy\engine\default.py:507: Warning: Incorrect string value: '\xD6\xD0\xB9\xFA\xB1\xEA...' for column 'VARIABLE_VALUE' at row 481
+  cursor.execute(statement, parameters)</msg>
+<msg timestamp="20180305 15:42:05.937" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180305 15:42:05.937" starttime="20180305 15:42:05.849"></status>
+</kw>
+<kw name="Verify Status Code" library="response">
+<arguments>
+<arg>${response}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20180305 15:42:05.938" level="INFO">Real status code:    200
+Expected status code:  200</msg>
+<status status="PASS" endtime="20180305 15:42:05.938" starttime="20180305 15:42:05.938"></status>
+</kw>
+<tags>
+<tag>user</tag>
+</tags>
+<timeout value="10 seconds"></timeout>
+<status status="PASS" endtime="20180305 15:42:05.938" critical="yes" starttime="20180305 15:42:05.848"></status>
+</test>
+<status status="PASS" endtime="20180305 15:42:05.967" starttime="20180305 15:42:05.643"></status>
+</suite>
+<status status="PASS" endtime="20180305 15:42:06.044" starttime="20180305 15:42:05.614"></status>
+</suite>
+<status status="PASS" endtime="20180305 15:42:06.100" starttime="20180305 15:42:05.557"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">user</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Testsuite" pass="1">Testsuite</stat>
+<stat fail="0" id="s1-s1" name="User" pass="1">Testsuite.User</stat>
+<stat fail="0" id="s1-s1-s1" name="User Create" pass="1">Testsuite.User.User Create</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,14 @@
+*** Settings ***
+Default Tags
+Test Timeout      10 seconds
+Library           ../../libs/database.py
+Library           ../../libs/response.py
+Library           ../../libs/user_api.py
+Variables         ../../libs/const.py
+Variables         ../../libs/header.py
+
+*** Test Cases ***
+CreateUserOk
+    [Tags]    user
+    ${response}    UserCreate    admin    30
+    VerifyStatusCode    ${response}    200
